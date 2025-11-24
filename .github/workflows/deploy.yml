@@ -3,6 +3,7 @@ name: Deploy website to webhosting
 jobs:
   web-deploy:
     name: Deploy
+    environment: Production
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -14,5 +15,4 @@ jobs:
         server: ${{ secrets.ftp_server }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
-        server-dir: ${{ secrets.server-dir }}
-        dry-run: true
+        server-dir: ${{ secrets.server_dir }}
