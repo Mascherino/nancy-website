@@ -1,1 +1,192 @@
-<h2>Hello world!</h2>
+<!DOCTYPE html>
+<html dir="ltr" lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="utf-8">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Nancy | Landing page</title>
+    <style>
+        li {
+            list-style-type: disc;
+        }
+        a {
+            color: blue!important;
+        }
+        a:hover {
+            color: lightskyblue!important;
+            text-decoration: underline;
+        }
+        .nancy {
+            font-weight: 700;
+        }
+        .section {
+            scroll-margin-top: 60px;
+        }
+    </style>
+    </head>
+    <body class="bg-zinc-800 text-white">
+        <div id="navbar" class="top-0 sticky bg-slate-700 p-2.5">
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#commands">Commands</a>
+            <a href="#getting-started">Getting started</a>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex flex-col items-center w-10/12">
+                <div class="flex flex-col items-center mt-5 rounded p-3 w-fit" style="background-color: rgb(100, 100, 100)">
+                    <span>Sunflower-land notification bot Nancy</span>
+                    <span class="text-xs">Made by Maschs</span>
+                </div>
+                <div class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-2 max-w-full">
+                    <ul class="mx-4">
+                    <li>Tired of forgetting to harvest your crops?</li>
+                    <li>Want to know exactly when your trees are replenished?</li>
+                    <li>Don't want to waste precious helps on already finished village projects?</li>
+                    <li>Are you remembering all the daily tasks only a few minutes before reset and start to panic?</li>
+                    </ul>
+                    <span class="mt-2">If any of these sound good to you, you might be interested in <span class="font-bold">Nancy</span></span>
+                </div>
+                <div id="overview" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                    <div class="flex flex-row justify-center mb-4">
+                        <span class="font-extrabold text-4xl">Introducing Nancy</span>
+                    </div>
+                    <span>Nancy is a Discord (and Telegram and others, more on that later) notification bot 
+                        for the web3 farming game <a href="https://sunflower-land.com">Sunflower Land.</a>
+                        Originally created in 2023, it now watches over more than 600 farms.
+                    </span>
+                </div>
+                <div id="features" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                    <div class="flex flex-row justify-center mb-4">
+                        <span class="font-extrabold text-4xl">Features</span>
+                    </div>
+                    <span>The following features are currently supported by Nancy.</span> 
+                    <span class="mb-2">Click on one of the features for more information.</span>
+                    <div class="flex flex-row justify-around mx-5">
+                        <div>
+                            <span>Automated notifications for:</span>
+                            <ul class="mx-5">
+                                <li><a href="/features/notifications/crops">Crops</a></li>
+                                <li><a href="/features/notifications/fruit">Fruit</a></li>
+                                <li><a href="/features/notifications/magic_beans">Magic beans</a></li>
+                                <li><a href="/features/notifications/resources">Resources</a></li>
+                                <li><a href="/features/notifications/resources">Lava pits</a></li>
+                                <li><a href="/features/notifications/animals">Animals</a></li>
+                                <li><a href="/features/notifications/animal_affection">Animal affection</a></li>
+                                <li><a href="/features/notifications/animal_produce">Animal produce</a></li>
+                                <li><a href="/features/notifications/cooking_buildings">Cooking buildings</a></li>
+                                <li><a href="/features/notifications/composters">Composters</a></li>
+                                <li><a href="/features/notifications/beehives">Beehives</a></li>
+                                <li><a href="/features/notifications/beeswarms">Beeswarms</a></li>
+                                <li><a href="/features/notifications/greenhouse">Greenhouse</a></li>
+                                <li><a href="/features/notifications/crop_machine">Crop machine</a></li>
+                                <li><a href="/features/notifications/crafting_box">Crafting box</a></li>
+                                <li><a href="/features/notifications/pet_petting">Pet petting</a></li>
+                                <li><a href="/features/notifications/village_projects">Village projects</a></li>
+                                <li><a href="/features/notifications/power_skills">Power skills</a></li>
+                                <li><a href="/features/notifications/expansion">Expansions</a></li>
+                                <li><a href="/features/notifications/floating_island_chest">Floating island chest</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="mt-5">Checks before daily reset for:</span>
+                            <ul class="mx-5 mb-5">
+                                <li><a href="/features/daily/daily_chest">Daily chest</a></li>
+                                <li><a href="/features/daily/pirate_chest">Pirate chest</a></li>
+                                <li><a href="/features/daily/minigames">Kingdom minigames</a></li>
+                                <li><a href="/features/daily/digging">Digging</a></li>
+                                <li><a href="/features/daily/pet_feeding">Pet feeding</a></li>
+                                <li><a href="/features/daily/cheers">Cheering</a></li>
+                                <li><a href="/features/daily/restock">Free restock</a></li>
+                                <li><a href="/features/daily/fish_frenzy">Fishing on fish frenzy day</a></li>
+                                <li><a href="/features/daily/full_moon">Fishing on full moon</a></li>
+                                <li><a href="/features/daily/flowers">Gifting flowers to Bumpkins</a></li>
+                                <li><a href="/features/daily/weather_items">Weather event items</a></li>
+                            </ul>
+                            <span>Global notifications:</span>
+                            <ul class="mx-5">
+                                <li><a href="/features/global/floating_island">Floating Island (on time, 5min, 60min)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="mt-5">All notifications can be enabled and disabled using the /setalerts command.</span>
+                    <span class="mt-2">In addition to enabling and disabling you can also set a custom offset for alerts.</span>
+                        <span>The offset (positive or negative) is applied to all automated notifications.</span>
+                        <span>For example you can set the offset for `Everything` to -10, so you get your notifications 10 seconds earlier,
+                        giving you time to open the game and be ready for harvesting. For more information, look for the /offset command under <a href="#commands">Commands</a></span>
+                </div>
+            <div id="commands" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                <div class="flex flex-row justify-center mb-4">
+                    <span class="font-extrabold text-4xl">Commands</span>
+                </div>
+                <span>These are the currently available commands in Discord:</span>
+                <span>Click on a command for more information.</span>
+                <ul class="mx-5">
+                    <li><a href="/commands/add_farm">Add farm</a></li>
+                    <li><a href="/commands/apprise">Apprise</a></li>
+                    <li><a href="/commands/auction_alert">Auction alert</a></li>
+                    <li><a href="/commands/auctions">Auctions</a></li>
+                    <li><a href="/commands/botinfo">Botinfo</a></li>
+                    <li><a href="/commands/calert">Custom alert</a></li>
+                    <li><a href="/commands/cmap">Crop map</a></li>
+                    <li><a href="/commands/del_apprise">Delete apprise</a></li>
+                    <li><a href="/commands/delfarm">Delete farm</a></li>
+                    <li><a href="/commands/flowers">Flower gifting</a></li>
+                    <li><a href="/commands/format">Message format</a></li>
+                    <li><a href="/commands/help">Help</a></li>
+                    <li><a href="/commands/map">Map</a></li>
+                    <li><a href="/commands/nextalerts">Next alerts</a></li>
+                    <li><a href="/commands/next_mutant">Next mutant</a></li>
+                    <li><a href="/commands/offset">Offset</a></li>
+                    <li><a href="/commands/reactivate.html">Reactivate</a></li>
+                    <li><a href="/commands/setalerts.html">Enable / disable alerts</a></li>
+                    <li><a href="/commands/settings">User settings</a></li>
+                    <li><a href="/commands/spotted">Spotted</a></li>
+                    <li><a href="/commands/system">System</a></li>
+                    <li><a href="/commands/timezone">Timezone</a></li>
+                    <li><a href="/commands/toggle_discord">Toggle discord</a></li>
+                    <li><a href="/commands/tutorial">Tutorial</a></li>
+                    <li><a href="/commands/user_info">User info</a></li>
+                </ul>
+                <span>These commands are available to everyone using Nancy.</span>
+                <span>The respective page for each command will show you how to use it, and what exactly it does.</span>
+            </div>
+            <div id="getting-started" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                <div class="flex flex-row justify-center mb-4">
+                    <span class="font-extrabold text-4xl">Getting started</span>
+                </div>
+                <span>While receiving notifications from <span class="nancy">Nancy</span> is possible on multiple platforms, changing your settings, 
+                    adding your farm and using the commands is only possible on Discord.</span>
+                <span>To get started join the Discord server with this link: <a href="https://discord.gg/faz4EkJVab">Nancy's Island</a></span>
+                <span>Once you have joined, you should open a direct message with <span class="nancy">Nancy</span>, and add your farm with the
+                <a href="/commands/add_farm">/add_farm</a> command.</span>
+                <span>This will add your farm to the database, and schedule it to be updated during the next update cycle.</span>
+                <span>After adding your farm, it can take up to 15 minutes for your farm to updated.</span>
+            </div>
+            <div id="support" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full">
+                <div class="flex flex-row justify-center mb-4">
+                    <span class="font-extrabold text-4xl">Support</span>
+                </div>
+                <span>If you like what Nancy is doing and want to support future development and updates, you can help me out by cheering or helping my farm.</span>
+                <span>Click here to visit my farm ingame: <a href="https://sunflower-land.com/play/#/visit/137396">Maschs' farm</a></span>
+            </div>
+            <div id="contact" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                <div class="flex flex-row justify-center mb-4">
+                    <span class="font-extrabold text-4xl">Contact</span>
+                </div>
+                <span>If you encounter any errors, want to request a feature or have any feedback regarding 
+                    <span class="nancy">Nancy</span>, feel free to contact me on Discord (maschs).</span>
+                <span>Should you not be able / do not want to use Discord, I'm also available via email: <a id="email" href=""></a></span>
+            </div>
+        </div>
+    <script>
+    // Simple javascript code against bot scraping
+    const user = "nancy";
+    const domain = "maschs.de";
+    const address = `${user}@${domain}`;
+    
+    const link = document.getElementById("email")
+    link.href = "mailto:" + address;
+    link.textContent = address;
+    </script>
+    </body>
+</html>
