@@ -26,53 +26,69 @@
         }
         .section {
             scroll-margin-top: 60px;
+            border-image: url("/border-img.png") 7 stretch;
+            border-width: 15px;
+            border-style: solid;
+            border-radius: 20px;
+            image-rendering: pixelated;
+            background-color: #c28569;
+            background-size: 20%;
+            color: white!important;
         }
         .container {
-            width: 85rem!important;
+            width: 65rem!important;
+        }
+        body {
+            background-image: url("water_background.png");
+            background-size: 128px;
+            background-repeat: repeat;
         }
     </style>
     </head>
-    <body class="bg-zinc-800 text-white">
-        <div id="navbar" class="top-0 sticky bg-slate-700 p-2.5">
-            <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#getting-started">Getting started</a>
-            <a href="#commands">Commands</a>
+    <body class=" text-white">
+        <div id="navbar" class="top-0 sticky bg-[#c28569] p-2.5 border-b-2 border-b-black">
+            <div class="flex flex-row justify-evenly">
+                <a href="#overview">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#getting-started">Getting started</a>
+                <a href="#commands">Commands</a>
+                <a href="#support">Support</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
         <div class="flex justify-center">
             <div class="flex flex-col container">
                 <div class="mt-5 flex flex-row justify-center">
                     <div class="flex flex-col justify-center max-w-fit">
-                        <img src="nancy_header.png">
-                        <img class="mt-5" src="created_by_maschs.png">
+                        <img src="header_image.png">
                     </div>
                 </div>
-                <div class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-2 max-w-full">
+                <div class="flex flex-col mt-5 px-4 py-2 max-w-full section">
                     <ul class="mx-4">
                     <li>Tired of forgetting to harvest your crops?</li>
                     <li>Want to know exactly when your trees are replenished?</li>
                     <li>Don't want to waste precious helps on already finished village projects?</li>
                     <li>Are you remembering all the daily tasks only a few minutes before reset and start to panic?</li>
                     </ul>
-                    <span class="mt-2">If any of these sound good to you, you might be interested in <span class="font-bold">Nancy</span></span>
+                    <span class="mt-2">If you relate to any of these, you might be interested in <span class="nancy">Nancy</span></span>
                 </div>
-                <div id="overview" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                <div id="overview" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                     <div class="flex flex-row justify-center mb-4">
                         <span class="font-extrabold text-4xl">Introducing Nancy</span>
                     </div>
                     <span>
                         Nancy is a Discord (and Telegram and others, more on that later) notification bot 
-                        for the web3 farming game <a href="https://sunflower-land.com">Sunflower Land.</a>
+                        for the web3 farming game <a href="https://sunflower-land.com">Sunflower Land</a>.
                     </span>
                     <span>Originally created in 2023, it now watches over more than 600 farms.</span>
                     <span class="mt-2">All of Nancy's features are <span class="font-bold">free</span> to use for everyone. It was very important for me to make this very clear from the beginning.</span>
-                    <span>If you are looking for ways to support Nancy and me, look at <a href="#support">Support</a>.</span>
+                    <span>If you are looking for ways to support the development of <span class="nancy">Nancy</span>, have a look at <a href="#support">Support</a>.</span>
                 </div>
-                <div id="features" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+                <div id="features" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                     <div class="flex flex-row justify-center mb-4">
                         <span class="font-extrabold text-4xl">Features</span>
                     </div>
-                    <span>The following features are currently supported by Nancy.</span> 
+                    <span>The following features are currently supported by <span class="nancy">Nancy</span></span> 
                     <span class="mb-2">Click on one of the features for more information.</span>
                     <div class="flex flex-row justify-around mx-5">
                         <div>
@@ -98,6 +114,7 @@
                                 <li><a href="/features/notifications/power_skills">Power skills</a></li>
                                 <li><a href="/features/notifications/expansion">Expansions</a></li>
                                 <li><a href="/features/notifications/floating_island_chest">Floating island chest</a></li>
+                                <li><a href="/features/notifications/shrines">Shrine expiry</a></li>
                             </ul>
                         </div>
                         <div>
@@ -121,13 +138,13 @@
                             </ul>
                         </div>
                     </div>
-                    <span class="mt-5">All notifications can be enabled and disabled using the /setalerts command.</span>
+                    <span class="mt-5">All notifications can be enabled and disabled using the <a href="/commands/setalerts.html">/setalerts</a> command.</span>
                     <span class="mt-2">In addition to enabling and disabling you can also set a custom offset for alerts.</span>
                         <span>The offset (positive or negative) is applied to all automated notifications.</span>
                         <span>For example you can set the offset for `Everything` to -10, so you get your notifications 10 seconds earlier,
                         giving you time to open the game and be ready for harvesting. For more information, look for the /offset command under <a href="#commands">Commands</a></span>
                 </div>
-            <div id="getting-started" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+            <div id="getting-started" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
                     <span class="font-extrabold text-4xl">Getting started</span>
                 </div>
@@ -139,7 +156,7 @@
                 <span>This will add your farm to the database, and schedule it to be updated during the next update cycle.</span>
                 <span>After adding your farm, it can take up to 15 minutes for your farm to updated.</span>
                 </div>
-            <div id="commands" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+            <div id="commands" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
                     <span class="font-extrabold text-4xl">Commands</span>
                 </div>
@@ -179,7 +196,7 @@
                 <span>These commands are available to everyone using Nancy.</span>
                 <span>The respective page for each command will show you how to use it, and what exactly it does.</span>
             </div>
-            <div id="support" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full">
+            <div id="support" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
                     <span class="font-extrabold text-4xl">Support</span>
                 </div>
@@ -189,7 +206,7 @@
                 <span>My wallet address is 0x2EA743C9979dFfBcD91617C459eeCa91bFe7B70d</span>
                 <span class="mt-2">Any support is very appreciated, and motivates me to spend more time developing additional features for Nancy.</span>
             </div>
-            <div id="contact" class="flex flex-col bg-gray-500 mt-5 rounded px-4 py-4 max-w-full section">
+            <div id="contact" class="flex flex-col mt-5 px-4 py-4 max-w-full section mb-5">
                 <div class="flex flex-row justify-center mb-4">
                     <span class="font-extrabold text-4xl">Contact</span>
                 </div>
