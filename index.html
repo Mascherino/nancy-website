@@ -33,7 +33,15 @@
             image-rendering: pixelated;
             background-color: #c28569;
             background-size: 20%;
-            color: white!important;
+            color: black;
+            font-size: large;
+        }
+        .section-title {
+            color: #76356e;
+            text-shadow: 2px 2px black;
+            font-weight: 800;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
         }
         .container {
             width: 65rem!important;
@@ -45,7 +53,7 @@
         }
     </style>
     </head>
-    <body class=" text-white">
+    <body>
         <div id="navbar" class="top-0 sticky bg-[#c28569] p-2.5 border-b-2 border-b-black">
             <div class="flex flex-row justify-evenly">
                 <a href="#overview">Overview</a>
@@ -65,34 +73,34 @@
                 </div>
                 <div class="flex flex-col mt-5 px-4 py-2 max-w-full section">
                     <ul class="mx-4">
-                    <li>Tired of forgetting to harvest your crops?</li>
-                    <li>Want to know exactly when your trees are replenished?</li>
-                    <li>Don't want to waste precious helps on already finished village projects?</li>
-                    <li>Are you remembering all the daily tasks only a few minutes before reset and start to panic?</li>
+                    <li>Tired of forgetting to harvest your <span class="font-bold">crops</span>?</li>
+                    <li>Want to know exactly when your <span class="font-bold">trees</span> are replenished?</li>
+                    <li>Don't want to waste precious helps on already finished <span class="font-bold">village projects</span>?</li>
+                    <li>Are you remembering all the <span class="font-bold">daily tasks</span> only a few minutes before reset and start to panic?</li>
                     </ul>
                     <span class="mt-2">If you relate to any of these, you might be interested in <span class="nancy">Nancy</span></span>
                 </div>
                 <div id="overview" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                     <div class="flex flex-row justify-center mb-4">
-                        <span class="font-extrabold text-4xl">Introducing Nancy</span>
+                        <span class="section-title">Introducing Nancy</span>
                     </div>
                     <span>
-                        Nancy is a Discord (and Telegram and others, more on that later) notification bot 
+                        <span class="nancy">Nancy</span> is a Discord (and Telegram and others, more on that later) notification bot 
                         for the web3 farming game <a href="https://sunflower-land.com">Sunflower Land</a>.
                     </span>
                     <span>Originally created in 2023, it now watches over more than 600 farms.</span>
-                    <span class="mt-2">All of Nancy's features are <span class="font-bold">free</span> to use for everyone. It was very important for me to make this very clear from the beginning.</span>
+                    <span class="mt-2">All of <span class="nancy">Nancy's</span> features are <span class="font-bold">free</span> to use for everyone. It was very important for me to make this very clear from the beginning.</span>
                     <span>If you are looking for ways to support the development of <span class="nancy">Nancy</span>, have a look at <a href="#support">Support</a>.</span>
                 </div>
                 <div id="features" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                     <div class="flex flex-row justify-center mb-4">
-                        <span class="font-extrabold text-4xl">Features</span>
+                        <span class="section-title">Features</span>
                     </div>
                     <span>The following features are currently supported by <span class="nancy">Nancy</span></span> 
                     <span class="mb-2">Click on one of the features for more information.</span>
                     <div class="flex flex-row justify-around mx-5">
                         <div>
-                            <span>Automated notifications for:</span>
+                            <span class="font-semibold">Automated notifications for:</span>
                             <ul class="mx-5">
                                 <li><a href="/features/notifications/crops">Crops</a></li>
                                 <li><a href="/features/notifications/fruit">Fruit</a></li>
@@ -118,7 +126,7 @@
                             </ul>
                         </div>
                         <div>
-                            <span class="mt-5">Checks before daily reset for:</span>
+                            <span class="mt-5 font-semibold">Checks before daily reset for:</span>
                             <ul class="mx-5 mb-5">
                                 <li><a href="/features/daily/daily_chest">Daily chest</a></li>
                                 <li><a href="/features/daily/pirate_chest">Pirate chest</a></li>
@@ -132,7 +140,7 @@
                                 <li><a href="/features/daily/flowers">Gifting flowers to Bumpkins</a></li>
                                 <li><a href="/features/daily/weather_items">Weather event items</a></li>
                             </ul>
-                            <span>Global notifications:</span>
+                            <span class="font-semibold">Global notifications:</span>
                             <ul class="mx-5">
                                 <li><a href="/features/global/floating_island">Floating Island (on time, 5min, 60min)</a></li>
                             </ul>
@@ -146,7 +154,7 @@
                 </div>
             <div id="getting-started" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
-                    <span class="font-extrabold text-4xl">Getting started</span>
+                    <span class="section-title">Getting started</span>
                 </div>
                 <span>While receiving notifications from <span class="nancy">Nancy</span> is possible on multiple platforms, changing your settings, 
                     adding your farm and using the commands is only possible on Discord.</span>
@@ -158,7 +166,7 @@
                 </div>
             <div id="commands" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
-                    <span class="font-extrabold text-4xl">Commands</span>
+                    <span class="section-title">Commands</span>
                 </div>
                 <span>These are the currently available commands in Discord:</span>
                 <span>Click on a command for more information.</span>
@@ -170,13 +178,11 @@
                     <li><a href="/commands/auctions">Auctions</a></li>
                     <li><a href="/commands/botinfo">Botinfo</a></li>
                     <li><a href="/commands/calert">Custom alert</a></li>
-                    <li><a href="/commands/cmap">Crop map</a></li>
                     <li><a href="/commands/del_apprise">Delete apprise</a></li>
                     <li><a href="/commands/delfarm">Delete farm</a></li>
                     <li><a href="/commands/flowers">Flower gifting</a></li>
                     <li><a href="/commands/format">Message format</a></li>
                     <li><a href="/commands/help">Help</a></li>
-                    <li><a href="/commands/map">Map</a></li>
                     </ul>
                     <ul class="mx-5">
                     <li><a href="/commands/nextalerts">Next alerts</a></li>
@@ -198,7 +204,7 @@
             </div>
             <div id="support" class="flex flex-col mt-5 px-4 py-4 max-w-full section">
                 <div class="flex flex-row justify-center mb-4">
-                    <span class="font-extrabold text-4xl">Support</span>
+                    <span class="section-title">Support</span>
                 </div>
                 <span>If you like what Nancy is doing and want to support future development and updates, you can help me out by cheering or helping my farm.</span>
                 <span>Click here to visit my farm ingame: <a href="https://sunflower-land.com/play/#/visit/137396">Maschs' farm</a></span>
@@ -208,7 +214,7 @@
             </div>
             <div id="contact" class="flex flex-col mt-5 px-4 py-4 max-w-full section mb-5">
                 <div class="flex flex-row justify-center mb-4">
-                    <span class="font-extrabold text-4xl">Contact</span>
+                    <span class="section-title">Contact</span>
                 </div>
                 <span>If you encounter any errors, want to request a feature or have any feedback regarding 
                     <span class="nancy">Nancy</span>, feel free to contact me on Discord (maschs).</span>
